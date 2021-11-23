@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+}
+
+.btn {
+  width: 60px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: transparent;
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Tabs extractor",
+  "description": "Extract open tabs into separate file",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["tabs", "downloads"]
+}
