@@ -1,0 +1,24 @@
+{
+  "name": "tabs-extractor",
+  "version": "1.0.0",
+  "description": "Extract open tabs info into JSON file",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/arkdich/tabs-extractor.git"
+  },
+  "keywords": [
+    "google",
+    "chrome",
+    "extract",
+    "open",
+    "tabs"
+  ],
+  "author": "arkdich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arkdich/tabs-extractor/issues"
+  },
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}

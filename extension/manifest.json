@@ -1,0 +1,16 @@
+{
+  "author": "arkdich",
+  "name": "Tabs Extractor",
+  "description": "Extract open tabs into separate file",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["tabs", "downloads"],
+  "action": {
+    "default_popup": "src/index.html"
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  }
+}
