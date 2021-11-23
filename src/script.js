@@ -1,23 +1,23 @@
-const btn = document.querySelector('button');
+const form = document.querySelector('.form');
 
-btn.addEventListener('click', async (ev) => {
+form.addEventListener('submit', async function (ev) {
+  ev.preventDefault();
+
+  const isPretty = document.getElementById('pretty').checked;
+
   const tabs = await chrome.tabs.query({ currentWindow: true });
 
   const tabsInfo = tabs.map(({ title, url }) => ({ title, url }));
 
-  const blob = new Blob(
-    [
-      new Blob([JSON.stringify(tabsInfo, null, 2)], {
-        type: 'application/json',
-      }),
-    ],
-    { type: 'application/json' }
+  const tabsBlob = new Blob(
+    [JSON.stringify(tabsInfo, null, isPretty ? 2 : null)],
+    {
+      type: 'application/json',
+    }
   );
 
-  const url = URL.createObjectURL(blob);
-
   chrome.downloads.download({
-    url,
+    url: URL.createObjectURL(tabsBlob),
     filename: `${tabsInfo.length}-tabs.json`,
   });
 });
